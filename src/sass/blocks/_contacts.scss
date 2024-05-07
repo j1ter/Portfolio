@@ -74,12 +74,21 @@
             padding: 0 20px;
             font-size: 12px;
         }
+        #email-error, #name-error {
+            padding: 0;
+            top: 45px;
+            color: red;
+        }
         
     }
 
     &__textarea {
         position: relative;
         grid-column: 1 / 3;
+        #text-error {
+            top: 190px;
+            color: red;
+        }
         textarea {
             width: 100%;
             height: 100%;
@@ -94,4 +103,5 @@
         font-size: 14px;
         line-height: 21px;
     }
+    
 }
