@@ -1,5 +1,9 @@
 <?php 
 
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Allow-Headers: Content-Type");
+
 $name = $_POST['name'];
 $text = $_POST['text'];
 $email = $_POST['email'];
