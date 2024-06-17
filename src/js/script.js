@@ -60,7 +60,7 @@ $(document).ready(function() {
 
         $.ajax({
             type: "POST",
-            url: "https://myportfoliodwdwdwd.000webhostapp.com/mailer/smart.php",
+            url: "mailer/smart.php",
             data: $(this).serialize()
         }).done(function() {
             $(this).find("input").val("");
@@ -68,5 +68,26 @@ $(document).ready(function() {
             $('form').trigger('reset');
         });
         return false;
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Функция для добавления плавного перехода
+    function smoothScroll(event) {
+        event.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+
+    // Добавляем плавный переход для ссылок в меню
+    document.querySelectorAll('.menu__link a').forEach(anchor => {
+        anchor.addEventListener('click', smoothScroll);
+    });
+
+    // Добавляем плавный переход для ссылок в .promo__btns
+    document.querySelectorAll('.promo__link').forEach(anchor => {
+        anchor.addEventListener('click', smoothScroll);
     });
 });
